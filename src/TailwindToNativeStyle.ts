@@ -6,7 +6,7 @@ import { getTailwindColor, getTailwindNumericValue } from './utils/utils';
 
 export class TailwindToNativeStyle {
   constructor(public STYLE_PATH?: string) {
-    this.STYLE_PATH = path.join(process.cwd(), 'src', 'styles');
+    this.STYLE_PATH = this.STYLE_PATH ||  path.join(process.cwd(), 'src', 'styles');
     eventEmitter.on('generate', this.createStyle.bind(this));
   }
 
