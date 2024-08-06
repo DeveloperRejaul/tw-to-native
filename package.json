@@ -1,0 +1,55 @@
+{
+  "name": "tw-to-native",
+  "version": "1.0.0",
+  "description": "The TailwindCSS to React Native Style Compiler is an innovative npm library designed to bridge the gap between TailwindCSS and React Native. This library allows developers to effortlessly convert TailwindCSS utility classes into React Native styles, making it easier to maintain a consistent design system across web and mobile applications",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "env-cmd -f .env nodemon --watch src src/index.ts",
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "start:cjs": "node dist/cjs/index.js",
+    "start:esm": "node dist/esm/index.js"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "directories": {
+    "dist": "dist`"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeveloperRejaul/tw-to-native.git"
+  },
+  "author": "Rejaul Karim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeveloperRejaul/tw-to-native/issues"
+  },
+  "keywords": [
+    "tw-to-native",
+    "Compiler"
+  ],
+  "homepage": "https://github.com/DeveloperRejaul/tw-to-native#readme",
+  "files": [
+    "dist/**/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.5.4",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "esbuild": "0.23.0",
+    "eslint": "^8.47.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "nodemon": "^3.0.3",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.2.3",
+    "typescript": "^5.1.6",
+    "env-cmd": "^10.1.0"
+  }
+}
