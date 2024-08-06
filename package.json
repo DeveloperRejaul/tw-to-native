@@ -6,10 +6,10 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "env-cmd -f .env nodemon --watch src src/index.ts",
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
     "start:cjs": "node dist/cjs/index.js",
-    "start:esm": "node dist/esm/index.js"
+    "start:esm": "node dist/esm/index.js",
+    "start": "ts-node src/index.ts"
   },
   "exports": {
     ".": {
@@ -38,21 +38,20 @@
     "@types/node": "^20.5.4",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
+    "env-cmd": "^10.1.0",
     "esbuild": "0.23.0",
     "eslint": "^8.47.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
-    "nodemon": "^3.0.3",
     "rimraf": "^5.0.1",
     "ts-node": "^10.9.2",
     "tsup": "^8.2.3",
-    "typescript": "^5.1.6",
-    "env-cmd": "^10.1.0"
+    "typescript": "^5.1.6"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DeveloperRejaul/tw-to-native.git"
   },
-   "publishConfig": {
+  "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "private": false

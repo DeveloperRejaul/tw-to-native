@@ -6,7 +6,7 @@ import { getTailwindColor, getTailwindNumericValue } from './utils/utils';
 
 export class TailwindToNativeStyle {
   constructor(public STYLE_PATH?: string) {
-    this.STYLE_PATH = this.STYLE_PATH ||  path.join(process.cwd(), 'src', 'styles');
+    this.STYLE_PATH = this.STYLE_PATH || path.join(process.cwd(), 'src', 'styles');
     eventEmitter.on('generate', this.createStyle.bind(this));
   }
 
@@ -31,11 +31,11 @@ export class TailwindToNativeStyle {
     await fs.writeFile(`${this.STYLE_PATH}/${fileName}`, data);
   }
 
-  public async init() {
+  public async init(stylePath?: string) {
     try {
-      await fs.readdir(this.STYLE_PATH);
+      await fs.readdir(stylePath ? path.join(process.cwd(), stylePath) : this.STYLE_PATH);
     } catch (error) {
-      fs.mkdir(this.STYLE_PATH);
+      fs.mkdir(stylePath ? path.join(process.cwd(), stylePath) : this.STYLE_PATH);
     }
   }
     

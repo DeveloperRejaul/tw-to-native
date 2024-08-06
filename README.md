@@ -12,9 +12,9 @@ A utility library to convert Tailwind CSS classes to React Native stylesheets.
 To install the library, use npm or yarn:
 
 ```sh
-npm install tailwind-to-native-style
+npm install tw-to-native
 # or
-yarn add tailwind-to-native-style
+yarn add tw-to-native
 ```
 
 ## Usage
