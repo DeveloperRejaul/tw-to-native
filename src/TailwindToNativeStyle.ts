@@ -1,4 +1,4 @@
-import type { Styles } from './types/types';
+import { type Styles } from './types';
 import { promises as fs } from 'fs';
 import * as path from 'path';
 import eventEmitter from './eventEmitter';

@@ -21,10 +21,6 @@
   "directories": {
     "dist": "dist`"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DeveloperRejaul/tw-to-native.git"
-  },
   "author": "Rejaul Karim",
   "license": "ISC",
   "bugs": {
@@ -51,5 +47,7 @@
     "tsup": "^8.2.3",
     "typescript": "^5.1.6",
     "env-cmd": "^10.1.0"
-  }
+  },
+  "repository": "https://github.com/DeveloperRejaul/tw-to-native.git",
+  "private": true
 }
